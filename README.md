@@ -9,4 +9,6 @@ I am very grateful for the great learning experience with the professors, sectio
 
 I am a beginner in Python/programming learning, so the project is pretty straightforward and simple. I hope to receive your feedback on my code!
 
+Check out the 2-minute Youtube video where I demonstrated my program running and explained my ideas: https://www.youtube.com/watch?v=hLPfwfAwbiY
+
 #stanford #university computerscience #coding #python #onlinecourse #learning #pythonproject
