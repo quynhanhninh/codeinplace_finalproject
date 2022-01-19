@@ -1,4 +1,10 @@
-""" This program randomizes song(s) to suggest to its user. Song database includes 3 key categories of Emotion, Genre, and Occasion, with respective sub-categories. """
+# ----------------------------------------------
+# This program randomizes song(s) to suggest to its user. 
+# Song database includes 3 key categories of Emotion, Genre, and Occasion, with respective sub-categories. 
+#
+# Author: Ninh Quynh Anh 
+# Email: anh.ninh.190008@student.fulbright.edu.vn 
+# ----------------------------------------------
 
 import random
 
@@ -9,6 +15,7 @@ occasion = {"birthday":["Birthday - Katy Perry", "Birthday - Anne-Marie", "BIRTH
 random_list = ["Mr. Blue Sky - Electric Light Orchestra", "New Light - John Mayer", "Party In The U.S.A - Miley Cyrus", "Mariposa - Peach Tree Rascals", "Best Day of My Life - American Authors", "Summertime Sadness - Lana Del Rey", "Slow Dancing In The Dark - Joji", "Before You Go - Lewis Capaldi", "The Night We Met - Lord Huron", "Stone Cold - Demi Lovato", "good 4 u - Olivia Rodrigo", "Better Than Revenge - Taylor Swift", "Fuck You - Lily Allen", "Sorry Not Sorry - Demi Lovato", "Primadona - MARINA", "Shape of You - Ed Sheeran", "Starboy - The Weekend", "Sucker - Jonas Brothers", "FRIENDS - Marshmallow, Anne-Marie", "Still Into You - Paramore", "I Got A Boy - Girls' Generation", "Fire - BTS", "Psycho - Red Velvet", "Power - EXO", "BANG BANG BANG - BIGBANG", "Muộn rồi mà sao còn - Sơn Tùng M-TP", "Trốn Tìm - Đen", "Gác Lại Âu Lo - Da LAB, Miu Lê", "Nàng Thơ - Hoàng Dũng", "Tình Bạn Diệu Kỳ - Ricky Star, AMEE", "Birthday - Katy Perry", "Birthday - Anne-Marie", "BIRTHDAY - SOMI", "Any song - ZICO", "Khúc hát mừng sinh nhật - Phan Đình Tùng", "Best Of You - Andy Grammer, Elle King", "LOVE - AILEE, CHEN", "You & Me - James TW", "Electric Love - BØRNS", "Dance To This - Troye Sivan, Ariana Grande", "Summer - Calvin Harris", "YOUTH - Troye Sivan", "Riptide - Vance Joy", "Shut Up and Dance - WALK UP THE MOON", "I'm on Top of The World - The World's Cause"]
 
 def main():
+    '''Receive input from user to generate songs'''
     while True:
     # Introduce the program and ask user how many songs they want
         print("Welcome to the music recommender tool!")
@@ -30,7 +37,17 @@ def main():
             print("")
             print("")
 
-def random_song(mode, num_song): # Function to randomize song based on the playlist (mode) and number of songs user wants
+def random_song(mode, num_song):
+    '''
+    A method to select song from chosen mode 
+
+    Parameter 
+    --------
+    mode: int 
+        The category of songs' type in numerical type
+    num_song: int 
+        The number of song to which users want to listen
+    '''
     if mode == 4: # User chooses random mode
         track = [] # To keep track of randomized number
         print("Please enjoy the music:")
@@ -55,7 +72,19 @@ def random_song(mode, num_song): # Function to randomize song based on the playl
         sub_choice = input('There are "birthday", "love anniversary", and "road trip" songs. Enter one category: ')
         random_sub_list(mode, num_song, sub_choice)
 
-def random_sub_list(mode, num_song, sub_choice): # Randomize songs from corresponding dictionary (recommendation mode) with specific key (sub-category)
+def random_sub_list(mode, num_song, sub_choice):
+    '''
+    A helper method to choose music randomly in the sub-catergory list  
+
+    Parameter 
+    --------
+    mode: int 
+        The category of songs' type in numerical type
+    num_song: int 
+        The number of song to which users want to listen
+    sub_choice: str 
+        The subcategory of songs' type
+    '''
     track = [] # To keep track of randomized number
     sub_list = mode[sub_choice] # Access the value in the dictionary (earlier assigned as mode) with sub-category being the key, then assign the value into a new list to later randomize its items/songs
     print("Please enjoy music from " + sub_choice + " playlist:")
